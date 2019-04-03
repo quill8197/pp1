@@ -19,3 +19,9 @@ function largest($array)
     $largest = max($array);
     return $largest;
 }
+
+function average($array)
+{
+    $average = array_sum($array)/count($array);
+    return $average;
+}

@@ -35,7 +35,8 @@ include("functions.php");
     $largest = largest($numbers);
     echo 'Largest: '. $largest . '<br>';
 
-
+    $average = average($numbers);
+    echo 'Average: ' . $average . "<br>";
     ?>
 </body>
 </html>
