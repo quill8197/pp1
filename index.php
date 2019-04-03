@@ -5,6 +5,13 @@
  * Date: 4/3/2019
  * Time: 2:13 PM
  */
+
+//reports php erros
+ini_set("display_errors", 1);
+error_reporting(E_ALL);
+
+//include all functions
+include("functions.php");
 ?>
 
 <!doctype html>
@@ -19,17 +26,10 @@
 <body>
     <h1>Pair Program 1</h1>
     <?php
-    //a function that prints each item in an array
-    function printArr($items)
-    {
-        foreach ($items as $item)
-        {
-            echo $item . "<br>";
-        }
-    }
-
     //create an array and print it
     $numbers = array(7, 9, 8, 9, 8, 8, 6);
+
+    //test functions
     printArr($numbers);
     ?>
 </body>
