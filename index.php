@@ -31,6 +31,11 @@ include("functions.php");
 
     //test functions
     printArr($numbers);
+
+    $largest = largest($numbers);
+    echo 'Largest: '. $largest . '<br>';
+
+
     ?>
 </body>
 </html>

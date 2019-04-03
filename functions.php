@@ -14,3 +14,8 @@ function printArr($items)
     }
 }
 
+function largest($array)
+{
+    $largest = max($array);
+    return $largest;
+}
