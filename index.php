@@ -37,6 +37,14 @@ include('functions.php');
 
     $average = average($numbers);
     echo 'Average: ' . $average . '<br>';
+
+    $uniqueArray = removeDups($numbers);
+    echo 'No Duplicates: ';
+    foreach ($uniqueArray as $item)
+    {
+        echo $item . ', ';
+    }
+    echo '<br>';
     ?>
 </body>
 </html>
