@@ -45,6 +45,14 @@ include('functions.php');
         echo $item . ', ';
     }
     echo '<br>';
+
+    $distributedArray = distribution($numbers);
+    echo 'Distributed: <br>';
+    foreach($distributedArray as $matches => $item)
+    {
+        echo "Key=" . $matches . ", Value=" . $item;
+        echo "<br>";
+    }
     ?>
 </body>
 </html>
