@@ -7,11 +7,11 @@
  */
 
 //reports php erros
-ini_set("display_errors", 1);
+ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 //include all functions
-include("functions.php");
+include('functions.php');
 ?>
 
 <!doctype html>
@@ -36,7 +36,7 @@ include("functions.php");
     echo 'Largest: '. $largest . '<br>';
 
     $average = average($numbers);
-    echo 'Average: ' . $average . "<br>";
+    echo 'Average: ' . $average . '<br>';
     ?>
 </body>
 </html>
