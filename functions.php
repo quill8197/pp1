@@ -59,9 +59,13 @@ function distribution($array)
                 }
             }
 
-            //add to the array
+            //add to the array, matches as the key
             $newArray[$matches] = $item;
         }
     }
+
+    //sort the new array by keys
+    ksort($newArray);
+
     return $newArray;
 }
