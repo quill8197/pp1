@@ -38,34 +38,8 @@ function removeDups($array)
 //returns an associative copy of the array that counts the number of duplicates for each value
 function distribution($array)
 {
-    //track the length of the array
-    $arrayLength = count($array);
-
     //create the new array
-    $newArray = array(0);
-
-    //add to the new array
-    foreach ($array as $item)
-    {
-        //track the matches
-        $matches = 0;
-
-        //if it hasn't been compared yet
-        if (!in_array($item, $newArray))
-        {
-            //compare with other values and count each match
-            for ($i = 0; $i < $arrayLength; $i++)
-            {
-                if ($array[$i] == $item)
-                {
-                    $matches++;
-                }
-            }
-
-            //add to the array, matches as the key
-            $newArray[$matches] = $item;
-        }
-    }
+    $newArray = array_count_values($array);
 
     //sort the new array by keys
     ksort($newArray);
