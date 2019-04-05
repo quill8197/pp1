@@ -6,7 +6,7 @@
  * Time: 2:13 PM
  */
 
-//reports php erros
+//reports php errors
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
@@ -26,10 +26,11 @@ include('functions.php');
 <body>
     <h1>Pair Program 1</h1>
     <?php
-    //create an array and print it
+    //a test array
     $numbers = array(7, 9, 8, 9, 8, 8, 6);
 
-    //test functions
+    //test all of the functions using the test array
+    echo 'Printed with 1 item per line: <br>';
     printArr($numbers);
 
     $largest = largest($numbers);
@@ -39,20 +40,15 @@ include('functions.php');
     echo 'Average: ' . $average . '<br>';
 
     $uniqueArray = removeDups($numbers);
-    echo 'No Duplicates: ';
+    echo 'No Duplicates: <br>';
     foreach ($uniqueArray as $item)
     {
-        echo $item . ', ';
+        echo $item . ' ';
     }
-    echo '<br>';
 
     $distributedArray = distribution($numbers);
-    echo 'Distributed: <br>';
-    foreach($distributedArray as $matches => $item)
-    {
-        echo "Key=" . $matches . ", Value=" . $item;
-        echo "<br>";
-    }
+    echo '<br>Distributed: <br>';
+    print_r($distributedArray);
     ?>
 </body>
 </html>
